@@ -18,6 +18,12 @@
         exit; 
     }
 
+    //// Loading CSS Style 
+    wp_enqueue_style('MainCSS', plugins_url( '/assets/css/style.css', __FILE__)); 
+
+    //// Loading JS File 
+    wp_enqueue_script('MainJs', plugins_url( '/assets/js/GoogleLineChart.js', __FILE__)); 
+
     function myplugin_render()
     {
         add_menu_page( 
