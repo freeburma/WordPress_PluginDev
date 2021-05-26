@@ -1,1 +1,1 @@
-alert('Google Line Chart JS'); 
+// alert('Google Line Chart JS'); 

@@ -10,18 +10,25 @@ google.charts.setOnLoadCallback(drawBackgroundColor);
 function drawBackgroundColor() {
       var data = new google.visualization.DataTable();
       data.addColumn('string', 'X');
-      data.addColumn('number', 'Dogs');
+      data.addColumn('number', 'Monthly Sale');
 
       data.addRows([
-        ['0', 0],   ['1', 21],  ['2', 5],  
+        ['Jan', 3000], ['Feb', 3134],  
+        ['Mar', 4199], ['Apl', 1999], 
+        ['May', 700], ['Jun', 300], 
+        ['Jul', 450], ['Aug', 1024], 
+        ['Sep', 2456], ['Oct', 4579], 
+        ['Nov', 5104], ['Dec', 5456], 
       ]);
 
+
       var options = {
-        hAxis: {
-          title: 'Time'
-        },
+        
         vAxis: {
-          title: 'Popularity'
+          title: 'Sale'
+        },
+        hAxis: {
+          title: 'Month'
         },
         backgroundColor: '#f1f8e9'
       };
