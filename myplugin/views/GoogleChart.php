@@ -23,28 +23,41 @@ function drawBackgroundColor() {
 
         //// Adding data with php 
         <?php 
-        $saleData = array(
-            array('Jan', 3000), 
-            array('Feb', 3134),  
-            array('Mar', 4199), 
-            array('Apl', 1999), 
-            array('May', 700), 
-            array('Jun', 300), 
-            array('Jul', 450), 
-            array('Aug', 1024), 
-            array('Sep', 2456), 
-            array('Oct', 4579), 
-            array('Nov', 5104), 
-            array('Dec', 5456), 
-            array('Jan', 200), 
+        // $saleDataStatic = array(
+        //     array('Jan', 3000), 
+        //     array('Feb', 3134),  
+        //     array('Mar', 4199), 
+        //     array('Apl', 1999), 
+        //     array('May', 700), 
+        //     array('Jun', 300), 
+        //     array('Jul', 450), 
+        //     array('Aug', 1024), 
+        //     array('Sep', 2456), 
+        //     array('Oct', 4579), 
+        //     array('Nov', 5104), 
+        //     array('Dec', 5456), 
+        //     array('Jan', 200), 
+        // ); 
+
+
+        // foreach ($saleDataStatic as $sale)
+        // {
+        //     echo ("['". $sale[0] . "'," . $sale[1] . "], "); 
+        // }// end foreach 
+
+
+        ## Getting Data from Db 
+        global $wpdb; # *** "global" is required. 
+
+        $saleDataFromDb = $wpdb->get_results(
+            $wpdb->prepare("SELECT * FROM wp_Custom_SaleData")
         ); 
 
-
-        foreach ($saleData as $sale)
+        foreach ($saleDataFromDb as $saleData) 
         {
-            echo ("['". $sale[0] . "'," . $sale[1] . "], "); 
-        }// end foreach 
+            echo ("['". $saleData->Month . "'," . $saleData->SaleAmount . "], "); 
 
+        }// end foreach
 
       ?>
       
@@ -67,27 +80,38 @@ function drawBackgroundColor() {
       chart.draw(data, options);
     }
 </script>
-<!-- <?php 
-        $saleData = array(
-            array('Jan', 3000), 
-            array('Feb', 3134),  
-            array('Mar', 4199), 
-            array('Apl', 1999), 
-            array('May', 700), 
-            array('Jun', 300), 
-            array('Jul', 450), 
-            array('Aug', 1024), 
-            array('Sep', 2456), 
-            array('Oct', 4579), 
-            array('Nov', 5104), 
-            array('Dec', 5456), 
-        ); 
+<?php 
+        // $saleData = array(
+        //     array('Jan', 3000), 
+        //     array('Feb', 3134),  
+        //     array('Mar', 4199), 
+        //     array('Apl', 1999), 
+        //     array('May', 700), 
+        //     array('Jun', 300), 
+        //     array('Jul', 450), 
+        //     array('Aug', 1024), 
+        //     array('Sep', 2456), 
+        //     array('Oct', 4579), 
+        //     array('Nov', 5104), 
+        //     array('Dec', 5456), 
+        // ); 
 
 
-        foreach ($saleData as $sale)
-        {
-            echo ("['". $sale[0] . "'," . $sale[1] . "], "); 
-        }// end foreach 
+        // foreach ($saleData as $sale)
+        // {
+        //     echo ("['". $sale[0] . "'," . $sale[1] . "], "); 
+        // }// end foreach 
+
+        ## Getting Data from Db 
+        // global $wpdb; # *** "global" is required. 
+
+        // $saleDataFromDb = $wpdb->get_results("SELECT * FROM wp_Custom_SaleData"); 
+
+        // foreach ($saleDataFromDb as $saleData) 
+        // {
+        //     echo ("['". $saleData->Month . "'," . $saleData->SaleAmount . "], "); 
+
+        // }# end foreach
 
 
-      ?> -->
+      ?> 

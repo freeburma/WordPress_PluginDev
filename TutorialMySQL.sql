@@ -10,7 +10,7 @@ USE tutorial;
 -- DROP TABLE IF EXISTS wp_Custom_SaleData; 
 CREATE TABLE IF NOT EXISTS wp_Custom_SaleData (
 	ID INT NOT NULL AUTO_INCREMENT, 
-	SaleTotal VARCHAR(30), 
+	Month VARCHAR(30), 
     SaleAmount DECIMAL(16, 2),
     PRIMARY KEY (ID) 
 ); 
@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS wp_Custom_SaleData (
 
 -- Inserting Data into table
 INSERT INTO wp_Custom_SaleData
-(SaleTotal, SaleAmount) 
+(Month, SaleAmount) 
 VALUES 
 ('Jan', 3000), 
 ('Feb', 3134),  
