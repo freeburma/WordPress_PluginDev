@@ -9,7 +9,7 @@ USE tutorial;
 -- ** prefix "wp_" is very important at your LIVE Hosting
 -- DROP TABLE IF EXISTS wp_Custom_SaleData; 
 CREATE TABLE IF NOT EXISTS wp_Custom_SaleData (
-	ID INT NOT NULL AUTO_INCREMENT, 
+	Id INT NOT NULL AUTO_INCREMENT, 
 	Month VARCHAR(30), 
     SaleAmount DECIMAL(16, 2),
     PRIMARY KEY (ID) 
