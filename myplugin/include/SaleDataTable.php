@@ -92,7 +92,21 @@ class SaleDataTable extends WP_List_Table
         // Detail Info
         $detail_query_args = array(
             'page'  => "Add_Edit_SaleData", // Must Be "PHP view file"
+            'action' => 'detail', 
+            'Id' => $item['Id'], // Passing as the routing parameter
+        ); 
+
+        // Edit Info
+        $edit_query_args = array(
+            'page'  => "Add_Edit_SaleData", // Must Be "PHP view file"
             'action' => 'edit', 
+            'Id' => $item['Id'], // Passing as the routing parameter
+        ); 
+
+        // Delete Info
+        $delete_query_args = array(
+            'page'  => "Add_Edit_SaleData", // Must Be "PHP view file"
+            'action' => 'delete', 
             'Id' => $item['Id'], // Passing as the routing parameter
         ); 
 
@@ -100,6 +114,18 @@ class SaleDataTable extends WP_List_Table
             '<a href="%1$s">%2$s</a>', 
             esc_url( wp_nonce_url( add_query_arg($detail_query_args, 'admin.php'), '', "myplugin_nonce" )), 
             _x('Detail', 'List table row action', 'sale-data')
+        ); 
+
+        $actions['edit'] = sprintf(
+            '<a href="%1$s">%2$s</a>', 
+            esc_url( wp_nonce_url( add_query_arg($edit_query_args, 'admin.php'), '', "myplugin_nonce" )), 
+            _x('Edit', 'List table row action', 'sale-data')
+        ); 
+
+        $actions['delete'] = sprintf(
+            '<a href="%1$s">%2$s</a>', 
+            esc_url( wp_nonce_url( add_query_arg($delete_query_args, 'admin.php'), '', "myplugin_nonce" )), 
+            _x('Delete', 'List table row action', 'sale-data')
         ); 
 
 
@@ -138,7 +164,7 @@ class SaleDataTable extends WP_List_Table
         $orderby = ! empty( $_REQUEST['orderby'] ) ? wp_unslash( $_REQUEST['orderby'] ) : 'Id'; // WPCS: Input var ok.
 
         // If no order, default to asc.
-        $order = ! empty( $_REQUEST['order'] ) ? wp_unslash( $_REQUEST['order'] ) : 'dsc'; // WPCS: Input var ok.
+        $order = ! empty( $_REQUEST['order'] ) ? wp_unslash( $_REQUEST['order'] ) : 'asc'; // WPCS: Input var ok.
 
         // Determine sort order.
         $result = strcmp( $a[ $orderby ], $b[ $orderby ] );
@@ -199,13 +225,11 @@ class SaleDataTable extends WP_List_Table
         
 
         print_r($data); 
-        // print_r($saleDataFromDb); 
 
         // ========================== DATA ==============================
 
-        /* Dummy sorting *** might not need when we are dealing with db */
-        usort($data, array($this, 'usort_reorder')); // usort_reorder: is a callback function
-        // usort($saleDataFromDb, array($this, 'usort_reorder')); // usort_reorder: is a callback function
+        /* Sorting *** might not need when we are dealing with db */
+        // usort($data, array($this, 'usort_reorder')); // usort_reorder: is a callback function
 
         /* Required: Pagination */
         
