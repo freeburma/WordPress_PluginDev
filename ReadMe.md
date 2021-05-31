@@ -2,6 +2,7 @@
 
 ### Git Branches 
 <ol>
+    <li>master </li>
     <li>01-Plugin-Template </li>
     <li>02-Google-Chart-Frontend</li>
     <li>02-Google-Chart-Frontend-01</li>
