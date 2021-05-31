@@ -32,8 +32,16 @@
     //// Loading CSS Style 
     wp_enqueue_style('MainCSS', plugins_url( '/assets/css/style.css', __FILE__)); 
 
+    //// Adding CSS CDN URLS
+    wp_enqueue_style('BootStrap4','//maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'); 
+
     //// Loading JS File 
     wp_enqueue_script('MainJs', plugins_url( '/assets/js/GoogleLineChart.js', __FILE__)); 
+
+    //// Adding JS CDN URLS
+    wp_enqueue_script('BootStrap4_JQuery', '//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'); 
+    wp_enqueue_script('BootStrap4_popper', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'); 
+    wp_enqueue_script('BootStrap4_JS', '//maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'); 
 
     function myplugin_render()
     {
