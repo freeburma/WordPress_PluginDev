@@ -27,7 +27,6 @@
     }// end if 
 
     require( dirname(__FILE__) . '/include/SaleDataTable.php'); 
-    require( dirname(__FILE__) . '/include/Test.php'); 
 
 
     //// Loading CSS Style 
@@ -59,10 +58,10 @@
 
         add_submenu_page(
             'my_plugin',              // Parent slug
-            'Test',       // Menu slug
-            'Test',       // menu title
-            'manage_options',               // capability
-            'Test',       // slug
+            'Add_Edit_SaleData',       // Menu slug
+            'Add/Edit SaleData',       // menu title
+            'manage_options',          // capability
+            'Add_Edit_SaleData',       // slug
             'test_render_page'      // callback
         );
 
@@ -94,11 +93,8 @@
 
     function test_render_page()
     {
-        $test = new Test(); 
-        $test->prepare_items(); 
-
-
-        include (dirname(__FILE__) . '/views/TestView.php'); 
+        
+        include (dirname(__FILE__) . '/views/Add_Edit_SaleData.php'); 
 
     }// end sale_info_render_page()
 

@@ -91,14 +91,14 @@ class SaleDataTable extends WP_List_Table
 
         // Detail Info
         $detail_query_args = array(
-            'page'  => "Test", // Must Be "PHP view file"
+            'page'  => "Add_Edit_SaleData", // Must Be "PHP view file"
             'action' => 'edit', 
             'Id' => $item['Id'], // Passing as the routing parameter
         ); 
 
         $actions['detail'] = sprintf(
             '<a href="%1$s">%2$s</a>', 
-            esc_url( wp_nonce_url( add_query_arg($detail_query_args, 'admin.php'), 'Test', "myplugin_nonce" )), 
+            esc_url( wp_nonce_url( add_query_arg($detail_query_args, 'admin.php'), '', "myplugin_nonce" )), 
             _x('Detail', 'List table row action', 'sale-data')
         ); 
 
