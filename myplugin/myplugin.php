@@ -94,7 +94,7 @@
     function test_render_page()
     {
         
-        include (dirname(__FILE__) . '/views/Add_Edit_SaleData.php'); 
+        include (dirname(__FILE__) . '/views/Add_Edit_SaleDataPage.php'); 
 
     }// end sale_info_render_page()
 
