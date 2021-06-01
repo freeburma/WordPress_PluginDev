@@ -224,7 +224,7 @@ class SaleDataTable extends WP_List_Table
 
         
 
-        print_r($data); 
+        // print_r($data); 
 
         // ========================== DATA ==============================
 
