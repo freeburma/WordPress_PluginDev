@@ -1,4 +1,30 @@
 ## Plugin Development with Google Chart
+This repo will help you to create a WordPress plugin using Custom Table, Google Chart 
+and CRUD operations in Database. We will be adding our plugin into the wordpress admin bar. 
+
+We will be using WP_List_Table and display as a list. We will be working directly 
+with database using "$wpdb". 
+
+
+![Optional Text](../master/Screenshot_1.png)
+
+### Software Compatible Version 
+<ol>
+    <li>PHP 7</li>
+    <li>MySQL 8</li>
+    <li>WordPress 5.7.2</li>
+</ol>
+
+## License
+
+This is FREE to use for both personal and commercial, however, you must 
+give reference to my GitHub Url and UserName as a credit for my time and efforts. 
+If you are publishing on printing both hard copies or digitally, please state 
+the license as above. 
+
+You may extends more features as your project needs. You may modify freely as license agreement above. 
+
+The code is as it. No guarantee to work. You should have the latest Internet browsers. Will not work on the old browser. 
 
 ### Git Branches 
 <ol>
