@@ -17,15 +17,15 @@ with database using "$wpdb".
 
 ### Required Software 
 <ol>
-<li>XAMPP (Download: https://www.apachefriends.org/index.html)</li>
+<li>XAMPP (Download URL: https://www.apachefriends.org/index.html)</li>
     <ul>
         <li>PHP (Include in XAMPP)</li>
         <li>MySQL (Include in XAMPP)</li>
     </ul>
 
-<li>Code Editor (VisualStudio Code Preferred) (Download: https://code.visualstudio.com/) </li>
-<li>MySQL Workbench Community Edition (Download: https://dev.mysql.com/downloads/workbench/) </li>
-<li>WordPress 5.7.2 (Download: https://wordpress.org/download/)</li>
+<li>Code Editor (VisualStudio Code Preferred) (Download URL: https://code.visualstudio.com/) </li>
+<li>MySQL Workbench Community Edition (Download URL: https://dev.mysql.com/downloads/workbench/) </li>
+<li>WordPress 5.7.2 (Download URL: https://wordpress.org/download/)</li>
 <li>Internet Browser</li>
 </ol>
 
