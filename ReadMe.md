@@ -5,8 +5,11 @@ and CRUD operations in Database. We will be adding our plugin into the wordpress
 We will be using WP_List_Table and display as a list. We will be working directly 
 with database using "$wpdb". 
 
-
+#### Main Screenshot
 ![Optional Text](../master/Screenshot_1.png)
+
+#### Bootstrap 4 Form to communicate with Db
+![Optional Text](../master/Screenshot_2.png)
 
 ### Software Compatible Version 
 <ol>
