@@ -48,6 +48,17 @@ with database using "$wpdb".
     <li>08-Google-Chart-Plugin_Activate_Deactivate</li>
 </ol>
 
+### Useful Git Commands 
+To see the remote branches: <br/>
+$ git branch -r 
+
+<br/>
+<br/>
+
+$ git check out -b <gitBranch_name>
+<br/>
+
+
 ## License
 
 This is FREE to use for both personal and commercial, however, you must 
