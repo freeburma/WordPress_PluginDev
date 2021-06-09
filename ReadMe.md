@@ -68,18 +68,32 @@ $ git remote show origin
 ### Creating a local branch from the remote repo (*** Must do all the repo manually.)
 $ git fetch origin <Git_Branch_Name>:<Git_Branch_Name>
 
+<br/>
+----------------------------------------------------------------------------------------------------------
+<br/>
+
 ### Pushing 
 $ git add . 
 $ git commit -m "Message"
 $ git push 
 
+<br/>
+----------------------------------------------------------------------------------------------------------
+<br/>
+
 ### Pointing Head to a desire branch
 $ git checkout <Branch_Name> 
 
+<br/>
+----------------------------------------------------------------------------------------------------------
+<br/>
 
 ### Resetting the the head to original stage 
 $ git reset --hard <Branch_Name>
 
+<br/>
+----------------------------------------------------------------------------------------------------------
+<br/>
 
 ## License
 
