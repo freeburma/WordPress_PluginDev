@@ -57,6 +57,31 @@ $ git branch -r
 
 $ git check out -b <gitBranch_name>
 <br/>
+----------------------------------------------------------------------------------------------------------
+<br/>
+
+
+### Checking branches on remote repo
+$ git branch -r 
+
+
+### Checking the branches on Remote repo
+$ git remote show origin
+
+### Creating a local branch from the remote repo (*** Must do all the repo manually.)
+$ git fetch origin <Git_Branch_Name>:<Git_Branch_Name>
+
+### Pushing 
+$ git add . 
+$ git commit -m "Message"
+$ git push 
+
+### Pointing Head to a desire branch
+$ git checkout <Branch_Name> 
+
+
+### Resetting the the head to original stage 
+$ git reset --hard <Branch_Name>
 
 
 ## License
