@@ -68,6 +68,10 @@ $ git remote show origin
 ### Creating a local branch from the remote repo (*** Must do all branches manually.)
 $ git fetch origin <Git_Branch_Name>:<Git_Branch_Name>
 
+
+### Deleting the branch from remote repo 
+$ git push origin --delete <repo_name>
+
 <br/>
 ----------------------------------------------------------------------------------------------------------
 <br/>
