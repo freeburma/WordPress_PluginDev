@@ -51,7 +51,7 @@ with database using "$wpdb".
 ### Useful Git Commands 
 To see the remote branches: <br/>
 $ git branch -r  <br/>
-$ git check out -b <gitBranch_name> <br/>
+$ git checkout -b <gitBranch_name> <br/>
 
 <br/>
 ----------------------------------------------------------------------------------------------------------
